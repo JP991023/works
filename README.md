@@ -43,3 +43,21 @@
 
 ## 三、Git的配置
 
+> 安装完Git的第一件事就是设置你的用户名称与邮件地址，这样做非常重要，因为每一个Git的提交都会使用这些信息，并且会写入到每一次提交中，不可更改：
+
+### 配置用户信息
+
+```
+$ git config --global user.name "Jerry"
+
+$ git config --global user.email 2569736452@qq.com
+
+```
+
+### 检查配置信息
+
+
+```
+$ git config --list
+```
+
