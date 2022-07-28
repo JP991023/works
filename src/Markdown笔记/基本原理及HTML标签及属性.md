@@ -410,3 +410,65 @@
 网页展示效果如下：
 
 ![空白折叠现象](/imgs/1.png)
+
+#### 2、常用转义符
+| 显示结果 | 描述       | 实体名称 |
+| :------- | :--------- | :------- |
+|          | 空格       | `&nbsp;` |
+| <        | 小于号     | `&lt;`   |
+| >        | 大于号     | `&gt;`   |
+| &        | &符号      | `&amp;`  |
+| "        | 双引号     | `&quot;` |
+| ©        | 版权       | `&copy;` |
+| ®        | 已注册商标 | `&reg;`  |
+
+代码展示如下：
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用转义字符</title>
+</head>
+<br>
+    <h1>HTML常用转义字符</h1>
+    <p>空格：&nbsp;&nbsp;&nbsp;&nbsp;这是四个空格</p>
+    <p>大于号：&gt;</p>
+    <p>小于号：&lt;</p>
+    <p>&符号：&amp;</p>
+    <p>双引号：&quot;</p>
+    <p>版权符号：&copy;</p>
+    <p>已注册商标：&reg;</p>
+
+    <p>在网页中直接显示原标签：</p>
+
+    显示p标签 &lt;p&gt;&lt;/p&gt; </br>
+    显示div标签：&lt;div&gt;&lt;/div&gt;
+</body>
+</html>
+```
+网页效果如下：
+![常用转义字符](/imgs/2.png)
+
+#### 3、HTML注释
+> **开发人员最讨厌的两件事：**
+>
+> + 自己加注释
+> + 别人写的代码不加注释
+>
+> **添加注释的重要性**
+>
+> + 提高代码的可阅读性，方便自己及他人阅读
+> + 增强代码的可维护性
+> 
+> **注：**
+> + 注释在网页中不显示，只有自己能看到
+> **HTML注释的语法：**
+> ```html
+> <!--注释内容-->
+> 
+>```
+> 在VsCode中，可以使用快捷键`CTRL+/`添加注释
+  
