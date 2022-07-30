@@ -543,6 +543,7 @@ HTML5中提供了三种列表标签
 > 
 > + 无序列表有type属性，可以定义前导符号的样式，但在HTML5中已经被废弃，建议使用CSS代替
 > + 只做学习和了解即可
+
 | 属性 | 值     | 描述           |
 | :--- | :----- | :------------- |
 | type | disc   | 默认值，实心圆 |
@@ -596,3 +597,314 @@ HTML5中提供了三种列表标签
 > + ……基本常见网站导航、列表页都会使用ul、li无序列表标签
 
 ![京东导航栏](/imgs/6.png)
+
+#### 5、有序列表-基础语法
+
+> 有刻意顺序的列表就叫做有序列表
+
+![有序列表](/imgs/7.png)
+
+> **关于有序列表**
+> + 有序列表使用`<ol></ol>`标签，每个列表项都是`<li></li>`标签
+> + `<ol>`标签是英文`ordered list（排序列表）`缩写
+> + ol的特性与ul li同理
+
+```html
+<h1>编程语言排行榜</h1>
+    <ol>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+```
+代码网页展示如下：
+
+![编程有序列表](/imgs/8.png)
+
+#### 6、有序列表ol的type属性
+
+> ol标签可以设置type属性，用来设置标号的类型
+
+| type属性值 | 描述               |
+| :--------- | :----------------- |
+| 1          | 数字编号（默认值） |
+| A          | 大写英文字母编号   |
+| a          | 小写英文字母编号   |
+| Ⅰ          | 大写罗马数字编号   |
+| i          | 小写罗马数字编号   |
+
+```html
+<h1>编程语言排行榜</h1>
+    <p>ol的type属性 默认值-数字编号</p>
+    <ol>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 大写英文字母编号</p>
+    <ol type="A">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写英文字母编号</p>
+    <ol type="a">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 大写罗马数字编号</p>
+    <ol type="I">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写罗马数字编号</p>
+    <ol type="i">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+```
+代码网页展示如下：
+
+![有序列表type属性](/imgs/9.png)
+
+#### 7、有序列表ol的start属性
+
+> **start属性**
+> + `start`属性的值必须是一个整数，制订了列表编号的起始值
+> + 此属性的值`阿拉伯数字`
+
+```html
+<h1>编程语言排行榜</h1>
+    <p>ol的type属性 默认值-数字编号</p>
+    <ol start="3">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 大写英文字母编号</p>
+    <ol type="A" start="4">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写英文字母编号</p>
+    <ol type="a" start="4">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 大写罗马数字编号</p>
+    <ol type="I" start="5">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写罗马数字编号</p>
+    <ol type="i" start="4">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+```
+
+代码网页展示如下：
+
+![ol的start属性](/imgs/10.png)
+
+#### 8、有序列表ol的reversed属性
+
+> **reversed属性**
+> + reversed属性是HTML5中的新属性
+> + reversed属性是一个布尔属性
+> + reversed属性指定列表中的条目是否是倒序排列的
+> + reversed属性不需要值，只需要写reversed即可
+
+```html
+<h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写罗马数字编号</p>
+    <ol type="i" start="4">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+    <h1>编程语言排行榜</h1>
+    <p>ol的type属性 小写罗马数字编号</p>
+    <ol type="i" start="4" reversed>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+    </ol>
+```
+
+代码网页展示如下：
+
+![ol的reversed属性](/imgs/11.png)
+
+#### 9、定义列表
+
+> **需要逐条给出定义描述的列表，即定义列表**
+> + 定义列表使用`<dl></dl>`标签，是英文单词`definition list(定义列表)`缩写
+> + `<dt></dt>`标签，是英文单词`data term(数据项)`缩写
+> + `<dd></dd>`标签，是英文单词`data definition(数据定义)`缩写
+> + `dd标签`内容是对`dt标签`的解释说明
+> + 案例：`小米官网`首页底部
+
+![定义列表](/imgs/12.png)
+
+> + `<dl>`是定义列表标签，内容交替出现`<dt>、<dd>`标签
+> 
+> + 也允许dt、dd`不交替出现`，而是分别处于不同定义列表dl中，可以更好的服务CSS样式
+
+
+```html
+    <!-- 定义列表-dt、dd交替出现 -->
+
+    <h1>定义列表-dt、dd交替出现</h1>
+    <dl>
+      <dt>服务支持</dt>
+      <dd>售后政策</dd>
+      <dd>关注我们</dd>
+      <dd>自助服务</dd>
+
+      <dt>关注我们</dt>
+      <dd>新浪微博</dd>
+      <dd>官方微信</dd>
+      <dd>关于我们</dd>
+    </dl>
+
+    <!-- 定义列表-dt、dd不交替出现 -->
+
+    <h1>定义列表-dt、dd不交替出现</h1>
+    <dl>
+      <dt>服务支持</dt>
+      <dd>售后政策</dd>
+      <dd>关注我们</dd>
+      <dd>自助服务</dd>
+    </dl>
+
+    <dl>
+      <dt>关注我们</dt>
+      <dd>新浪微博</dd>
+      <dd>官方微信</dd>
+      <dd>关于我们</dd>
+    </dl>
+
+```
+代码网页展示如下：
+
+![定义列表dd、dt交替与不交替使用](/imgs/13.png)
+
+> **注意：** 在dt、dd不交替出现时，两个定义列表内容间有一行间隔，而在dt、dd交替出现时，则没有
+> 间隔
+
+### 八、多媒体标签
+
+#### 1、图片标签img
+
+> **(1)语法和基础**
+> 
+> `<img>`标签用来在网页中插入图片
+> ```html
+> <img src="images/wjp.png" />
+> ```
+> + img是单词`image(图片)`的缩写
+> + src是单词`source(来源)`的缩写
+> + ""中是图片的存储目录和完整的文件名
+> 
+> 
+> 注：
+> + 图片必须存放在项目文件夹中，一般放于`images`文件夹
+> + 图片只是引入到网页中，本质上没有被插入到网页中
+> 
+> **(2)img标签的alt属性**
+> 
+> + alt属性是英语`alternate(代替者)`缩写，对图像的文本描述，不强制
+> + 若由于某种原因无法加载图片，浏览器会在页面显示alt属性中的备用文本
+> + 对于搜索引擎优化良好，告诉搜索引擎图片的含义，利于搜索引擎爬虫抓取
+> + 供视力不方便的用户使用的网页朗读器，也会朗读alt中的文本
+> ```html
+> <img src="images/wjp.png" alt="wjp自画像">
+> ```
+> 
+> **(3)img标签的width、height属性**
+> 
+> + width、height 属性设置图片的宽度和高度，单位是px(像素)，可不写
+> + 如果省略其中一个属性，则表示按原始比例缩放图片
+> ```html
+> <img src="images/wjp.png" alt="wjp自画像" width="200" height="200">
+> ```
+> 
+> **(4)图片标签规范**
+> 
+> + PC端img图片必须写src、width、height、alt属性，统称图片标签的四要素
+> + 移动端必须写alt属性
+> + alt不能为无意义字符，需要能表现出图片的含义，如图片为道具图，则应该为道具的名称
+
+#### 2、网页上支持的图片格式
+
+| 支持格式      | 描述                                                     |
+| :------------ | :------------------------------------------------------- |
+| `.bmp`        | Windows画图软件默认保存的格式，位图                      |
+| `.jpeg(.jpg)` | 有损压缩图片，通常用于照片显示                           |
+| `.png`        | 便携式网络图像，用于logo，背景图形等。支持透明和半透明图 |
+| `.gif`        | 动画，如：表情包                                         |
+| `.svg`        | 矢量图片                                                 |
+| `.webp`       | 最新的压缩算法，非常优秀的图片格式                       |
+
+#### 3、相对路径和绝对路径
+
+> **相对路径**
+> 
+> + 从当前网页出发，找到图片的路径就叫==相对路径==
+> 
+> ```html
+> <img src="images/wjp.jpg" />
+> <img src="../images/wjp.jpg" />
+> <img src="../../src/images/wjp.jpg">
+> ……
+> ```
+> 
+> + ../表示回退上一级目录
+> + ./表示当前目录
+> + 通过`cmd`命令行`dir`命令查询可知："."和".."本身就是两个文件夹
+> 
+> **绝对路径**
+> 
+> + 描述文件或文件夹的精确完整地址
+> 
+> ```html
+> <img src="D:\Thirty days challenge\eight\works\src\images\wjp.jpg" />
+> ```
+
