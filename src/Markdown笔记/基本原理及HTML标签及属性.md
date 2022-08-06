@@ -905,6 +905,474 @@ HTML5中提供了三种列表标签
 > + 描述文件或文件夹的精确完整地址
 > 
 > ```html
-> <img src="D:\Thirty days challenge\eight\works\src\images\wjp.jpg" />
+> <img src="http://pic.ntimg.cn/file/20160615/22619627_101238471000_2.jpg" />
 > ```
+
+#### 4、超级链接-a标签
+
+> **(1)语法和基础**
+> 
+> **超级链接是网页与网页之间链接跳转的方法**
+> 
+> + `<a></a>`标签是英语`anchor`锚的首字母
+> + `href`属性是英语`hypertext reference(超文本引用)`缩写
+>
+>```html
+> <a href="https://www.baidu.com">百度一下，你就知道</a>
+>``` 
+>
+> **(2)a标签的href属性**
+> 
+> href属性支持相对路径和绝对路径
+ ```html
+ <a href="./多媒体标签.html">多媒体标签</a>
+ <a href="../多媒体标签.html">多媒体标签</a>
+ <a href="D:\Thirty days challenge\eight\works\src\index\多媒体标签.html">多媒体标签</a>
+ <a href="https://www.icodingedu.com">艾编程</a>
+ ```
+
+代码网页展示如下：
+
+![超链接a标签的href属性](/imgs/14.png)
+
+> **(4)a标签的target属性**
+> 
+> **_TIP_**
+> 
+> |target属性值|描述|
+> |:----|:----|
+> |_blank/blank|在新窗口中打开网页|
+> |_self|默认，当前页面跳转|
+> 
+> 注：HTML4中blank之前有个下划线`_blank`都可使用
+
+ ```html
+  <h1>超级链接-a标签</h1>
+    <a href="https://www.baidu.com">百度一下，你就知道</a>
+
+    <h2>a标签的 target 属性</h2>
+    <a href="https://www.baidu.com" target="_blank">_blank:新窗口打开</a>
+    <a href="https://www.baidu.com" target="_self">_self:默认，当前页面打开</a>
+ ```
+
+代码网页展示如下：
+
+![a标签的target属性](/imgs/15.png)
+
+> 给照片添加超级链接：点击图片标签跳转链接
+> ```html
+> <a href="https://www.baidu.com" target="_blank">
+>        <img src="/imgs/logo.png" alt="百度一下，你就知道" /> 
+> ```
+> **(5)网页锚点**
+> 
+> **_TIP_**
+> 
+> + 对于很长的页面，可以给对应的标签添加`id属性`，将它变成页面的“锚点”
+> + 当点击锚点链接时，浏览器地址栏就会出现`#id属性名称`页面就会自动滚动到锚点处
+> + 从其他页面点击带#号的链接，就可以直接定位到锚点位置
+> 
+ ```html
+ <h1>页面锚点链接</h1>
+
+   <p>
+      <a href="#phone">小米手机</a> &nbsp;&nbsp;&nbsp;
+      <a href="#zn">智能穿戴</a> &nbsp;&nbsp;&nbsp;
+      <a href="#jd">家电</a> &nbsp;&nbsp;&nbsp;
+      <a href="#sh">生活电器</a>
+    </p>
+
+    <h2 id="phone">小米手机</h2>
+    <img src="../images/1.webp" alt="" />
+
+    <h2 id="zn">智能穿戴</h2>
+    <img src="../images/2.webp" alt="" />
+
+    <h2 id="jd">家电</h2>
+<img src="../images/3.webp" alt="" />
+
+    <h2 id="sh">生活电器</h2>
+    <img src="../images/4.webp" alt="" />
+
+    <p>
+      <a href="#top">回到顶部</a>
+    </p>
+``` 
+> **注:**
+> 
+> 在HTML5中直接使用`#top`即可回到顶部
+> ```html
+> <a href="#top">回到顶部</a>
+> ```
+
+代码网页展示如下：
+
+![锚点链接1](../../imgs/16.png)
+
+![锚点链接2](../../imgs/17.png)
+
+> **(6)特殊链接(下载、邮件、电话)**
+> 
+> **_下载链接_**
+> 
+> 指向exe、zip、rar、word、excel等文件格式的链接，将自动成为下载链接
+
+```html
+<h1>特殊链接</h1>
+
+    <h2>下载链接</h2>
+
+    <p>指向exe、zip、rar、word、excel等文件格式的链接，将自动成为下载链接</p>
+
+    <a href="../doc/刘思雨.zip">刘思雨爱心树下载地址</a>
+    <br /><br />
+    <a href="../doc/2.docx">2docx文档</a>
+```
+
+网页代码展示如下：
+
+![特殊链接-压缩、doc](/imgs/18.png)
+
+> **邮件链接**
+> 
+> + `mailto:`前缀的链接，即邮件链接
+> + 系统将自动打开email相关软件，即可发送邮件
+> ```html
+> <a href="mailto:2569736452@qq.com">给wjp发送邮件</a>
+> ```
+>
+> **电话连接**
+> 
+> `tel:`前缀的链接，即电话链接
+> 系统将自动打开手机拨号键
+> ```html
+> <a href="tel:12345678901">给xxx打电话</a>
+> ```
+
+#### 5、音频和视频
+
+> **_TIP_**
+> 
+> + 早年在网页插入音视频需使用Flash技术，当下基本已经淘汰
+> + 可直接使用HTML5标签在网页中插入音视频
+
+> **_(1)音频标签_**
+> 
+> TIP
+> 
+> + `<audio>`标签可直接在网页中插入音频，并自动生成默认的编辑器
+> + `controls`属性，显示播放空间
+> + `src`音频路径
+> + `标签对中`对不兼容audio标签的浏览器所显示的文字
+> + 浏览器中常用的音频格式：mp3和ogg格式
+> ```html
+><audio controls src="../mp3/王娜 - 我的余生谁来陪.flac"></audio>
+>```
+> **音频标签部分属性：**
+> + `autoplay`音频自动播放，不会等待整个音频文件下载完成
+> + `loop`循环播放音频
+> ```html
+> <audio controls src="../mp3/王娜 - 我的余生谁来陪.flac" autoplay loop></audio>
+> ```
+> 
+> **_(2)音频标签`audio`的子标签_**
+>
+> TIP
+> source标签为媒体元素定义媒体资源，该标签允许定义多个格式的音视频文件，供浏览器选择自己支持的媒体类型进行播放
+> 
+> |Format|MIME-type|描述|
+> |----|----|----|
+> |MP3|audio/mpeg|一种音频压缩技术，用来大幅度的降低音频数据量|
+> |Ogg|audio/ogg|一种新的音频压缩格式，是完全免费、开发和没有专利限制的|
+> |Wav|audio/wav|微软公司开发的一种声音文件格式，声音文件质量和CD相差无几|
+> 
+> + 浏览器需要选择它支持格式的源文件进行播放，如果都支持则任选一个(默认选择第一个)
+> ```html
+> <h2>audio 子标签 source</h2>
+>
+>    <audio controls>
+>      <source src="../mp3/玄昌俊 - 那个人你听见了吗.flac" type="audio/wav" />
+>      <source src="../mp3/王娜 - 我的余生谁来陪.flac" type="audio/mpeg" />
+>      <source src="../mp3/孙艺琪 - 爱你的人不会让你哭.flac" type="audio/ogg" />
+>    </audio>
+> ``` 
+>
+> 网页代码展示如下：
+> 
+> ![音频标签](../../imgs/19.png)
+
+> **_视频标签`video`的子标签_**
+> 
+> TIP
+> 
+> |Format|MIME-type|描述|
+> |----|----|---- |
+> |MP4|video/mp4|MP4=MPEG4 文件使用H264视频编解码器和AAC音频编解码器|
+> |webm|video/webm|WebM文件使用VP8视频编解码器和Vorbis音频编解码器|
+> |avi|video/avi|avi文件支持256色和RLE压缩，它对视频文件采用了一种有损压缩方式|
+> |ogv|video/ogv|Ogg文件使用Theora视频编解码器和Vorbis音频编解码器|
+>
+> + 浏览器需要选择它支持格式的源文件进行播放，如果都支持则任选一个(默认选择第一个)
+> ```html
+> <h2>video 子标签 source</h2>
+>
+>    <video controls width="500">
+>      <source src="../mp4/1.mp4" type="video/mp4" />
+>      <source src="../mp4/1.mp4" type="video/mp4" />
+>    </video>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![video 子标签](../../imgs/20.png)
+
+### 九、语义化标签
+
+#### 1、HTML文本格式化标签
+
+> (1)span标签
+> 
+> **TIP**
+> 
+> + `<span>`标签是文本中的`区块标签`，没有任何显示效果，可以结合CSS来定位区块的样式
+> + 需要被特殊标记的元素也会使用`<span>`标签
+> 
+> ```html
+> <h1>语义化标签</h1>
+>
+>    <h2>span标签</h2>
+>
+>    <p>
+>      商品价格：
+>      <span>368</span>元 优惠价：<span>298</span>元
+>    </p>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![span标签](../../imgs/21.png)
+> 
+>  (2)文本格式化标签
+> 
+>  |标签|描述|
+>  |:----|:----:|
+>  |`<b>`|定义粗体文本（已被CSS）代替|
+>  |`<em>`|定义着重文字（被强调的文本）|
+>  |`<i>`|定义斜体文字（已被CSS代替）|
+>  |`<u>`|定义文字的下划线（已被CSS代替）|
+>  |`<strong>`|定义加重语气，标示特别重要的文字|
+>  |`<sub>`|定义下标文字|
+>  |`<sup>`|定义上标文字|
+>  |`<del>`|定义删除文字|
+>  |`<pre>`|定义预格式文本。被包围在`<pre>`标签元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。`<pre>`标签的一个常用应用就是用来表示计算机的源代码|
+>  |`<mark>`|一段需要被高亮的文本（HTML5新标签）|
+>  |`<figure>`|代表一段独立的内容，与说明`figcaption`标签配合使用。figure标签规定独立的流内容（图像、图表、照片、代码等）|
+> |`<figcaption>`|一个独立的引用单元，标签为`<figure>`元素定义标题|
+> 
+> ```html
+>   <h2>文本格式化标签</h2>
+>
+>    b标签：<b>定义粗体文本</b> <br /><br />
+>    em标签：<em>表示被强调的文本</em><br /><br />
+>    i标签：<i>斜体</i><br /><br />
+>    u标签：<u>定义文本下划线</u><br /><br />
+>    strong标签：<strong>定义加重语气，表示特别重要的文字</strong><br /><br />
+>    del标签：<del>定义删除字</del><br /><br />
+>    mark标签：<mark>一段需要被高亮的文本</mark><br /><br />
+>
+>    <h3>sub标签</h3>
+>
+>    <p>碳在氧气中充分燃烧：C+O<sub>2</sub> =CO<sub>2</sub></p>
+>    <p>铁在氧气中充分燃烧：3Fe+2O<sub>2</sub>=Fe<sub>3</sub>O<sub>4</sub></p>
+>
+>   <h3>sup标签</h3>
+>
+>    <p>2<sup>3</sup>+3<sup>2</sup>=17</p>
+>
+>    <h3>pre 预格式化文本</h3>
+>
+>    <pre>
+>
+>      预格式文本
+>
+>      被包围在 pre 标签元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+>
+>      pre 标签的一个常用应用就是用来表示计算机的源代码
+>    </pre>
+>
+>   <h3>figure、figcaption 标签</h3>
+>
+>    <p>
+>     代表一段独立的内容，与figcaption配合使用。
+>      figure标签规定独立的流内容(图像、图表、照片、代码等)。
+>      一个独立的引用单元，标签为figure元素定义标题
+>    </p>
+>
+>    <p>
+>      <figure>
+>        <img src="../images/1.webp" alt="" />
+>        <figcaption>小米智能，小米手机</figcaption>
+>      </figure>
+>
+>      <figure>
+>        <img src="../images/2.webp" alt="" />
+>        <figcaption>小米智能，小米手表</figcaption>
+>      </figure>
+>    </p>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![文本格式化标签](../../imgs/22.png)
+> 
+> #### 2、HTML5区块标签
+> 
+> |标签|描述|
+> |:----:|:----|
+> |`<section>`|文档的区域，语义比`<div>`大|
+> |`<article>`|文档的核心文章内容，会被搜索引擎主要抓取|
+> |`<aside>`|文档的非必要相关内容，比如：广告等|
+> |`<nav>`|导航条|
+> |`<header>`|页头|
+> |`<main>`|网页核心部分|
+> |`<footer>`|页脚|
+> 
+> ```html
+> <!-- 网页的页头 -->
+>
+>    <header>
+>      <div>
+>        <h1>网页的logo</h1>
+>      </div>
+>      <!-- 导航栏 -->
+>      <nav>网页的导航栏</nav>
+>    </header>
+>
+>    <!-- 网页的核心 -->
+>    <main>
+>      <!-- banner广告栏 -->
+>      <aside>bannner广告</aside>
+>
+>      <!-- 商品信息 -->
+>
+>     <article>
+>        <h2>商品标题</h2>
+>        <section>商品信息1</section>
+>        <section>商品信息2</section>
+>        <section>商品信息3</section>
+>      </article>
+>    </main>
+>
+>    <!-- 页脚 -->
+>    <footer>页脚部分</footer>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![html5区块标签](../../imgs/23.png)
+
+
+### 十、表单元素
+
+> **TIP**
+> 
+> + HTML表单用于收集不同类型的用户输入
+> + 如：登录、注册、发布、提交、编辑信息等
+> 类似如下效果图：
+
+![表单](../../imgs/24.png)
+
+> #### 1、HTML表单基本用法
+>
+> **TIP**
+> 
+> + 所有的HTML表单都是以一个`<form>`元素包裹
+> + `<action>`属性：提交表单时向何处发送表单数据
+> + `<method>`属性：规定用于发送表单数据的HTTP方法
+> 
+> ```html
+> <h1>form表单</h1>
+> <form action="/user/login" method="get">……</form>
+> ```
+> #### 2、单行文本框
+> 
+> **TIP**
+> |标签|属性|描述|
+> |:----:|:----|:----|
+> |`<input>`|type="text"|单行文本框，单标签|
+> |`<input>`|value="wjp"|文本框的值|
+> |`<input>`|placeholder="请输入用户名……"|提示文本，以浅灰色显示在文本框中，并不是文本框中的值|
+> |`<input>`|disabled|表示用户不能与元素交互，即：禁用|
+> 
+> ```html
+> <form action="/user" method="post">
+>      <p>用户名：<input type="text" /></p>
+>      <p>真实姓名：<input type="text" placeholder="请输入您的真实姓名……" /></p>
+>      <p>所在城市：<input type="text" value="西安市长安区" disabled /></p>
+>    </form>
+> ```
+>  
+> #### 3、密码框
+> 
+> **TIP**
+> 
+> + 与单行文本框类似，其属性为`type="password"`显示内容为隐藏的
+> ```html
+> <p>请输入密码：<input type="password"/></p>
+> ```
+> #### 4、单选按钮
+> 
+> **TIP**
+> 
+> |标签|属性|描述|
+> |`<input>`|type="radio"|单选按钮|
+> |`<input>`|name="自定义命名"|设置`互斥`，需将多个name属性设置为相同的值|
+> |`<input>`|value=""|向服务器提交的值|
+> |`<input>`|checked|表示默认选中的值|
+> 
+> ```html
+> <p>
+>        性别：
+>        <input type="radio" name="sex" />男
+>        <input type="radio" name="sex" checked />女
+>      </p>
+> ```
+> + 以上代码，点击`文字`时，不能选中，需要使用`<label>`标签
+> 
+> #### 5、label标签
+> 
+> **_用来将文字和单选按钮进行绑定_**
+> 
+> 当用户点击文字时，等于惦记了单选按钮，`在HTML5中直接使用<label>标签包裹单选按钮和文字即可`
+> ```html
+> <p>
+>        性别：
+>        <label><input type="radio" name="sex" />男</label>
+>        <label><input type="radio" name="sex" checked />女</label>
+>      </p>
+> ```
+> **在HTML4中**
+> 
+> + label标签是通过for属性和单选按钮的id属性进行绑定的
+> 
+> ```html
+> 所在城市：
+>      <input type="radio" name="city" id="beijing">
+>      <label for="beijing">北京市</label>
+>
+>      <input type="radio" name="city" id="shanghai">
+>      <label for="shanghai">上海市</label>
+>
+>      <input type="radio" name="city" id="shenzhen">
+>      <label for="shenzhen">深圳市</label>
+> ```
+
+
+
+
+
+
+
+
+
 
