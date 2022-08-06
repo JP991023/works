@@ -1225,7 +1225,7 @@ HTML5中提供了三种列表标签
 > 
 > ![文本格式化标签](../../imgs/22.png)
 > 
-> #### 2、HTML5区块标签
+ #### 2、HTML5区块标签
 > 
 > |标签|描述|
 > |:----:|:----|
@@ -1282,7 +1282,7 @@ HTML5中提供了三种列表标签
 
 ![表单](../../imgs/24.png)
 
-> #### 1、HTML表单基本用法
+ #### 1、HTML表单基本用法
 >
 > **TIP**
 > 
@@ -1294,7 +1294,7 @@ HTML5中提供了三种列表标签
 > <h1>form表单</h1>
 > <form action="/user/login" method="get">……</form>
 > ```
-> #### 2、单行文本框
+ #### 2、单行文本框
 > 
 > **TIP**
 > |标签|属性|描述|
@@ -1311,8 +1311,12 @@ HTML5中提供了三种列表标签
 >      <p>所在城市：<input type="text" value="西安市长安区" disabled /></p>
 >    </form>
 > ```
->  
-> #### 3、密码框
+> 
+>网页代码展示如下：  
+>
+>![表单](../../imgs/26.png)
+>
+ #### 3、密码框
 > 
 > **TIP**
 > 
@@ -1320,11 +1324,17 @@ HTML5中提供了三种列表标签
 > ```html
 > <p>请输入密码：<input type="password"/></p>
 > ```
-> #### 4、单选按钮
+> 
+> 网页代码展示如下：
+> 
+> ![密码](../../imgs/27.png)
+> 
+ #### 4、单选按钮
 > 
 > **TIP**
 > 
 > |标签|属性|描述|
+> |:----:|:----|:----|
 > |`<input>`|type="radio"|单选按钮|
 > |`<input>`|name="自定义命名"|设置`互斥`，需将多个name属性设置为相同的值|
 > |`<input>`|value=""|向服务器提交的值|
@@ -1339,7 +1349,7 @@ HTML5中提供了三种列表标签
 > ```
 > + 以上代码，点击`文字`时，不能选中，需要使用`<label>`标签
 > 
-> #### 5、label标签
+ #### 5、label标签
 > 
 > **_用来将文字和单选按钮进行绑定_**
 > 
@@ -1351,6 +1361,11 @@ HTML5中提供了三种列表标签
 >        <label><input type="radio" name="sex" checked />女</label>
 >      </p>
 > ```
+> 
+> 网页代码展示如下：
+> 
+> ![单选按钮及文字](../../imgs/28.png)
+> 
 > **在HTML4中**
 > 
 > + label标签是通过for属性和单选按钮的id属性进行绑定的
@@ -1366,6 +1381,309 @@ HTML5中提供了三种列表标签
 >      <input type="radio" name="city" id="shenzhen">
 >      <label for="shenzhen">深圳市</label>
 > ```
+> 
+> 网页代码展示如下：
+> 
+> ![label标签](../../imgs/29.png)
+> 
+ #### 6、复选框
+> 
+> |标签|属性|描述|
+> |:----:|:----|:----|
+> |`<input>`|type="checkbox"|复选框|
+> |`<input>`|name="自定义名称"|同组复选框应设置name为相同值|
+> |`<input>`|value=""|向服务器提交的值|
+> |`<input>`|checked|表示默认选中|
+> 
+> ```html
+> 兴趣爱好：
+>
+>      <label>
+>        <input type="checkbox" name="hobby" checked value="篮球" />篮球
+>      </label>
+>      <label>
+>        <input type="checkbox" name="hobby" value="乒乓球" />乒乓球
+>      </label>
+>      <label> <input type="checkbox" name="hobby" value="书法" />书法 </label>
+>      <label>
+>        <input type="checkbox" name="hobby" value="羽毛球" />羽毛球
+>      </label>
+>      <label> <input type="checkbox" name="hobby" value="跑步" />跑步 </label>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![复选框](../../imgs/30.png)
+
+#### 7、下拉菜单
+
+> **_TIP_**
+> 
+> + `<select>`标签，即`下拉菜单`
+> + `<option>`标签，即`内部选项`
+> 
+> ```html
+> 请选择<br /><br />
+>      省：
+>      <select>
+>        <option value="湖北省">湖北省</option>
+>        <option value="湖南省">湖南省</option>
+>        <option value="安徽省">安徽省</option>
+>        <option value="陕西省">陕西省</option>
+>      </select>
+>      市：
+>      <select>
+>        <option value="西安市">西安市</option>
+>        <option value="宝鸡市">宝鸡市</option>
+>        <option value="咸阳市">咸阳市</option>
+>        <option value="榆林市">榆林市</option>
+>      </select>
+>      区：
+>      <select>
+>        <option value="雁塔区">雁塔区</option>
+>        <option value="长安区">长安区</option>
+>        <option value="高新区">高新区</option>
+>      <option value="灞桥区">灞桥区</option>
+>     </select>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![下拉菜单](../../imgs/31.png)
+
+#### 8、多行文本框
+
+> **_TIP_**
+> 
+> + `<textarea>`表示多行文本框
+> + 具有`<rows>`和`<cols>`属性，用于定义多行文本框的行数和列数
+> 
+> ```html
+> 用户评论： <textarea cols="100" rows="10"></textarea>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![多行文本框](../../imgs/32.png)
+
+#### 9、按钮
+
+> |标签|属性|描述|
+> |:----:|:----|:----|
+> |`<input>`|type="button"|普通按钮，也可以简写为`<button></button>`|
+> |`<input>`|type="submit"|提交按钮|
+> |`<input>`|type="reset"|重置按钮|
+> 
+> ```html
+> <h2>按钮</h2>
+>      <button>我是一个button标签，也是一个普通按钮</button>
+>      <input type="button" value="我是一个普通按钮" />
+>      <input type="submit" value="提交表单信息" />
+>      <input type="reset" value="重置" />
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![按钮](../../imgs/33.png)
+> 
+> **常用表单控件**
+> |标签|type属性|描述|
+> |:----:|:----:|:----|
+> |`<input>`|text|单行文本框|
+> |`<input>`|radio|单选框|
+> |`<input>`|checkbox|复选框|
+> |`<input>`|password|密码框|
+> |`<input>`|button|普通按钮，也可以简写为`<button></button`|
+> |`<input>`|submit|提交按钮|
+> |`<input>`|rese|重置按钮|
+>
+>```html
+><!-- form表单 -->
+>
+>    <h1>form表单</h1>
+>
+>    <form action="/user" method="post">
+>      <p>用户名：<input type="text" /></p>
+>      <p>真实姓名：<input type="text" placeholder="请输入您的真实姓名……" /></p>
+>      <p>所在城市：<input type="text" value="西安市长安区" disabled /></p>
+>      <p>请输入密码：<input type="password" /></p>
+>      <p>
+>        性别：
+>        <input type="radio" name="sex" />男
+>        <input type="radio" name="sex" checked />女
+>      </p>
+>
+>      <p>
+>        性别：
+>        <label><input type="radio" name="sex" />男</label>
+>        <label><input type="radio" name="sex" checked />女</label>
+>      </p>
+>
+>      <!-- html4 -->
+>      所在城市：
+>      <input type="radio" name="city" id="beijing" />
+>      <label for="beijing">北京市</label>
+>
+>      <input type="radio" name="city" id="shanghai" />
+>      <label for="shanghai">上海市</label>
+>
+>      <input type="radio" name="city" id="shenzhen" />
+>      <label for="shenzhen">深圳市</label> <br /><br />
+>
+>      兴趣爱好：
+>
+>      <label>
+>        <input type="checkbox" name="hobby" checked value="篮球" />篮球
+>      </label>
+>      <label>
+>        <input type="checkbox" name="hobby" value="乒乓球" />乒乓球
+>      </label>
+>      <label> <input type="checkbox" name="hobby" value="书法" />书法 </label>
+>      <label>
+>        <input type="checkbox" name="hobby" value="羽毛球" />羽毛球
+>      </label>
+>      <label> <input type="checkbox" name="hobby" value="跑步" />跑步 </label>
+>
+>      <br /><br />
+>      <!-- 下拉菜单 -->
+>      请选择<br /><br />
+>      省：
+>      <select>
+>        <option value="湖北省">湖北省</option>
+>        <option value="湖南省">湖南省</option>
+>        <option value="安徽省">安徽省</option>
+>       <option value="陕西省">陕西省</option>
+>      </select>
+>      市：
+>      <select>
+>        <option value="西安市">西安市</option>
+>        <option value="宝鸡市">宝鸡市</option>
+>        <option value="咸阳市">咸阳市</option>
+>        <option value="榆林市">榆林市</option>
+>     </select>
+>      区：
+>      <select>
+>        <option value="雁塔区">雁塔区</option>
+>        <option value="长安区">长安区</option>
+>        <option value="高新区">高新区</option>
+>        <option value="灞桥区">灞桥区</option>
+>      </select>
+>      <!--多行文本框  -->
+>      <br /><br />
+>      用户评论： <textarea cols="100" rows="10"></textarea>
+>      <!-- 按钮 -->
+>
+>      <h2>按钮</h2>
+>      <button>我是一个button标签，也是一个普通按钮</button><br />
+> 
+>      <input type="button" value="我是一个普通按钮" /><br />
+>      <input type="submit" value="提交表单信息" /><br />
+>      <input type="reset" value="重置" /><br />
+>    </form>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![html表单元素](../../imgs/34.png)
+> 
+#### 10、HTML5新增表单控件
+
+|   标签    | type属性   | 描述               |
+| :-------: | :--------- | :----------------- |
+| `<input>` | color      | 颜色选择控件       |
+| `<input>` | date、time | 日期、时间选择控件 |
+| `<input>` | email      | 电子邮件输入控件   |
+| `<input>` | file       | 文件选择控件       |
+| `<input>` | number     | 数字输入控件       |
+| `<input>` | range      | 托曳条控件         |
+| `<input>` | search     | 搜索框             |
+| `<input>` | url        | 网址输入控件       |
+
+> 注：兼容到IE9，手机端完全兼容
+> 
+> ```html
+> <h1>HTML5新增表单控件</h1>
+>
+>    <form>
+>      <p>
+>        颜色选择：
+>        <input type="color" />
+>      </p>
+>
+>      <p>
+>        日期选择：
+>        <input type="date" />
+>      </p>
+>
+>      <p>
+>        时间选择：
+>        <input type="time" />
+>      </p>
+>
+>      <p>
+>        电子邮件（提交自动校验）
+>        <input type="email" />
+>      </p>
+>
+>      <p>
+>        必填项：
+>        <input type="text" required />
+>      </p>
+>
+>      <p>
+>        数字（min最小值，max最大值）：
+>        <input type="number" min="2" max="20" />
+>      </p>
+>
+>      <p>
+>        托曳条：
+>        <input type="range" min="10" max="50" />
+>      </p>
+>
+>      <p>
+>        搜索框：（多一个清空按钮）
+>        <input type="search" />
+>      </p>
+>
+>      <p>
+>        网址：
+>        <input type="url" />
+>      </p>
+>
+>      <p>
+>        <input type="submit" value="提交表单信息" />
+>      </p>
+>    </form>
+> ```
+>
+> 网页代码展示如下：
+> 
+> ![HTML5新增表单控件](../../imgs/35.png)
+>
+> **_datalist控件_**
+> 为输入框提供一些备选项，当用户输入的内容与备选项文字相同时，将会显示智能提示感应
+> 
+> 
+> ```html
+> datalist控件：
+>      <input type="text" list="language-list" />
+>      <datalist id="language-list">
+>        <option value="Java">Java</option>
+>        <option value="JavaScript">JavaScript</option>
+>        <option value="Python">Python</option>
+>        <option value="Go">Go</option>
+>        <option value="C++">C++</option>
+>      </datalist>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![datalist控件](../../imgs/36.png)
+> 
+
+
+
+
 
 
 
