@@ -1679,18 +1679,318 @@ HTML5中提供了三种列表标签
 > 网页代码展示如下：
 > 
 > ![datalist控件](../../imgs/36.png)
+>
+
+### 十一、表格
+
+![表格](../../imgs/37.png)
+
+#### 1、HTML表格标签
+
+|    标签     | 描述                                        |
+| :---------: | :------------------------------------------ |
+|  `<table>`  | 定义表格                                    |
+|   `<th>`    | 定义表格的表头                              |
+|   `<tr>`    | 定义表格的行                                |
+|   `<td>`    | 定义表格单元                                |
+| `<caption>` | 定义表格标题（作为table的第一个子元素出现） |
+|  `<thead>`  | 定义表格的页眉                              |
+|  `<tbody>`  | 定义表格的主体                              |
+|  `<tfoot>`  | 定义表格的页脚                              |
+
+#### 2、`<table>`标签属性
+
+|      属性       | 描述                                      |
+| :-------------: | :---------------------------------------- |
+|   `<border>`    | 表格的边框                                |
+|    `<width>`    | 表格的宽度（HTML5不支持）                 |
+| `<cellpadding>` | 单元边沿与其内容之间的空白（HTML5不支持） |
+| `<cellspacing>` | 单元格之间的空白（HTML5不支持）           |
+
+> 注：在HTML5中`<table>`标签的大部分属性**已经废弃**，全部使用CSS代替
 > 
+> ```html
+> <h2>table标签</h2>
+>    <table border="2" width="500" cellpadding="20" cellspacing="0">
+>      <!-- caption标签：表格标题 -->
+>      <caption>
+>        同学通讯录
+>      </caption>
+>      <tr>
+>        <!-- th标签，表头 -->
+>        <th>姓名</th>
+>        <th>性别</th>
+>        <th>年龄</th>
+>        <th>所在城市</th>
+>      </tr>
+>
+>      <tr>
+>        <td>arry</td>
+>        <td>男</td>
+>        <td>18</td>
+>        <td>北京</td>
+>      </tr>
+>      <tr>
+>        <td>wjp</td>
+>        <td>男</td>
+>        <td>23</td>
+>        <td>陕西</td>
+>      </tr>
+>      <tr>
+>        <td>豆豆</td>
+>        <td>女</td>
+>        <td>18</td>
+>        <td>上海</td>
+>      </tr>
+>      <tr>
+>        <td>阿奇</td>
+>        <td>女</td>
+>        <td>23</td>
+>        <td>深圳</td>
+>      </tr>
+>    </table>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![table标签](../../imgs/38.png)
 
+#### 3、`<table>`标签跨行、跨列
 
+`<td>`标签和`<th>`标签的属性
 
+| 属性      | 值     | 描述                   |
+| --------- | ------ | ---------------------- |
+| `colspan` | number | 规定单元格可横跨的列数 |
+| `rowspan` | number | 设置单元格可纵跨的行数 |
 
+> 注：`<td>`标签的其他属性在HTML5中已不支持，直接使用CSS即可
+> 
+> **_跨行_**
+> 
+> ```html
+> <h2>表格实战 - 跨列</h2>
+>
+>    <table border="1" width="800">
+>      <caption>
+>        学生个人信息登记表
+>      </caption>
+>      <tr>
+>        <th colspan="8">高新一中初三一班学生信息登记表</th>
+>      </tr>
+>      <tr>
+>        <th colspan="8">学生基础信息</th>
+>      </tr>
+>      <tr>
+>        <td>姓名</td>
+>        <td>XXX</td>
+>        <td>国籍/地区</td>
+>        <td>中国</td>
+>        <td>姓名拼音</td>
+>        <td>XXX</td>
+>        <td>班内学号</td>
+>        <td>20211101</td>
+>      </tr>
+>      <tr>
+>        <td>性别</td>
+>        <td>女</td>
+>        <td>身份证件类型</td>
+>        <td>本地居民</td>
+>        <td>曾用名</td>
+>        <td>无</td>
+>        <td>班级</td>
+>        <td>初三（1）班</td>
+>      </tr>
+>      <tr>
+>        <td>出生日期</td>
+>        <td>2002年9月1日</td>
+>       <td>民族</td>
+>        <td>汉</td>
+>        <td>户口所在地</td>
+>        <td>北京</td>
+>        <td>入学年份</td>
+>        <td>2015年</td>
+>      </tr>
+>      <tr>
+>        <td>出生地</td>
+>        <td>北京</td>
+>        <td>政治面貌</td>
+>        <td>团员</td>
+>        <td>户口性质</td>
+>        <td>城镇户口</td>
+>       <td>入学方式</td>
+>        <td>普通入学</td>
+>      </tr>
+>      <tr>
+>        <td>籍贯</td>
+>        <td>海淀区</td>
+>        <td>健康状况</td>
+>        <td>良好</td>
+>        <td>特长</td>
+>        <td>羽毛球</td>
+>        <td>就读方式</td>
+>        <td>走读</td>
+>      </tr>
+>      <tr>
+>        <td>身份证号</td>
+>        <td colspan="3"></td>
+>        <td>身份证有效期</td>
+>        <td colspan="3"></td>
+>      </tr>
+>      <tr>
+>        <th colspan="8">学生个人联系方式</th>
+>      </tr>
+>     <tr>
+>        <td>现住址</td>
+>        <td colspan="7"></td>
+>      </tr>
+>      <tr>
+>        <td>家庭住址</td>
+>       <td colspan="7"></td>
+>      </tr>
+>      <tr>
+>        <td>联系电话</td>
+>        <td colspan="7"></td>
+>      </tr>
+>      <tr>
+>        <td>电子邮箱</td>
+>        <td colspan="7"></td>
+>      </tr>
+>    </table>
+> ```
+>
+> 网页代码展示如下：
+> 
+> ![表格实战-跨列](../../imgs/39.png)
+> 
+> **_跨行、跨列_**
+> 
+> ```html
+> <h2>表格实战-跨行、跨列</h2>
+>
+>    <table border="1" width="800">
+>      <caption>
+>        版本规划任务分配表
+>      </caption>
+>
+>      <tr>
+>        <th colspan="2">需求：V0.3版本规划</th>
+>        <th>优先级</th>
+>        <th>任务分解</th>
+>        <th>产品负责人</th>
+>      </tr>
+>      <tr>
+>        <td rowspan="3">功能模块1</td>
+>        <td>具体事项1</td>
+>        <td>3</td>
+>        <td>任务1</td>
+>        <td rowspan="3">@翠花</td>
+>      </tr>
+>      <tr>
+>        <td rowspan="2">具体事项2</td>
+>        <td>4</td>
+>        <td>任务2</td>
+>      </tr>
+>      <tr>
+>        <td>1</td>
+>        <td>任务3</td>
+>      </tr>
+>      <tr>
+>        <td rowspan="6">功能模块2</td>
+>        <td>具体事项1</td>
+>        <td>2</td>
+>        <td>任务1</td>
+>        <td rowspan="6"></td>
+>      </tr>
+>      <tr>
+>        <td rowspan="4">具体事项2</td>
+>        <td>3</td>
+>        <td>任务1</td>
+>      </tr>
+>      <tr>
+>        <td>2</td>
+>        <td>任务2</td>
+>      </tr>
+>      <tr>
+>        <td>1</td>
+>        <td>任务3</td>
+>      </tr>
+>      <tr>
+>        <td>4</td>
+>        <td>任务4</td>
+>      </tr>
+>      <tr>
+>        <td>具体事项3</td>
+>        <td>1</td>
+>        <td>任务1</td>
+>      </tr>
+>      <tr>
+>        <th colspan="5">备注信息</th>
+>      </tr>
+>      <tr>
+>        <td colspan="5">···</td>
+>      </tr>
+>    </table>
+> ```
+> 
+> 网页代码展示如下：
+> 
+> ![表格实战-跨行、跨列](../../imgs/40.png)
+> 
+#### 4、`<thead>`、`<tbody>`、`<tfoot>`标签
 
-
-
-
-
-
-
-
-
-
+>```html
+><h2>表格：thead、tbody、tfoot标签</h2>
+>    <table border="1" width="500">
+>      <thead>
+>        <caption>
+>          同学通讯录
+>        </caption>
+>        <tr>
+>          <th>专业</th>
+>          <th>姓名</th>
+>          <th>性别</th>
+>          <th>年龄</th>
+>          <th>所在城市</th>
+>        </tr>
+>      </thead>
+>
+>
+>      <tbody>
+>        <tr>
+>          <th>计算机</th>
+>          <td>arry</td>
+>          <td>18</td>
+>          <td>男</td>
+>          <td>北京</td>
+>        </tr>
+>        <tr>
+>          <th>外语</th>
+>          <td>豆豆</td>
+>          <td>女</td>
+>          <td>21</td>
+>          <td>上海</td>
+>        </tr>
+>        <tr>
+>          <th>市场营销</th>
+>          <td>翠花</td>
+>          <td>19</td>
+>          <td>男</td>
+>          <td>深圳</td>
+>        </tr>
+>      </tbody>
+>
+>      <tfoot>
+>        <tr>
+>          <th>备注</th>
+>          <td colspan="4"></td>
+>        </tr>
+>      </tfoot>
+>    </table>
+>```
+>
+> 网页代码展示如下：
+> 
+> ![thead,tbody,tfoot标签](../../imgs/41.png)
+> 
+> 
